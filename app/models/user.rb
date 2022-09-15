@@ -1,4 +1,10 @@
 class User < ApplicationRecord
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
-end
+    has_many :foods, dependent: :destroy
+    devise :database_authenticatable, :registerable,
+           :recoverable, :rememberable, :validatable
+  
+    def admin?
+      role == 'admin'
+    end
+  end
+  
