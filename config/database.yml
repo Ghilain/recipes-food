@@ -61,6 +61,7 @@ development:
 test:
   <<: *default
   database: recipes_food_test
+  host: 127.0.0.1
   username: postgres
   password: Sebuzukira250
 
