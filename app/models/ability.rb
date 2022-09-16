@@ -16,7 +16,7 @@ class Ability
         recipe.user_id == user.id
       end
     end
-    
+
     # See the wiki for details:
     # https://github.com/CanCanCommunity/cancancan/wiki/Defining-Abilities
   end

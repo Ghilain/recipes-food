@@ -36,6 +36,7 @@ class UsersController < ApplicationController
       end
     end
   end
+
   # Delete user by their id
   # /1 or /1.json
   def destroy

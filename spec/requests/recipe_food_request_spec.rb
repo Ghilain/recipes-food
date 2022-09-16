@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'RecipeFoods', type: :request do
   before :each do
-    @user = User.create(name: 'Dudu', email: 'dudu@test.com', password: '123456789')
+    @user = User.create(name: 'ghila', email: 'ghila@test.com', password: '123456789')
     @recipe = @user.recipes.create(name: 'Chicken Salad', preparation_time: '2 hours', cooking_time: '1 hour',
                                    description: 'Chicken Salad description')
     @food = @user.foods.create(name: 'Beef', measurement_unit: 'kg', price: 2, quantity: 3)
@@ -22,7 +22,7 @@ RSpec.describe 'RecipeFoods', type: :request do
     end
 
     it 'should include "Add ingredient"' do
-      expect(response.body).to include('Add ingredient')
+      expect(response.body).to include('Add new ingredient')
     end
   end
 

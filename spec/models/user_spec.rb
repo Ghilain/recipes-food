@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  subject { User.new(name: 'Dudu') }
+  subject { User.new(name: 'ghila') }
   before { subject.save }
 
   it 'name should be present' do

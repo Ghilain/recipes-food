@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Recipes', type: :request do
   before :each do
-    @user = User.create(name: 'Dudu', email: 'dudu@test.com', password: '123456789')
+    @user = User.create(name: 'ghila', email: 'ghila@test.com', password: '123456789')
     @recipe = @user.recipes.create(name: 'Chicken Salad', preparation_time: '2 hours', cooking_time: '1 hour',
                                    description: 'Chicken Salad description')
     post user_session_path, params: { user: { email: @user.email, password: @user.password } }
@@ -53,7 +53,7 @@ RSpec.describe 'Recipes', type: :request do
     end
 
     it 'should include "Create New Recipe"' do
-      expect(response.body).to include('Add new recipe')
+      expect(response.body).to include('Add recipe')
     end
   end
 end

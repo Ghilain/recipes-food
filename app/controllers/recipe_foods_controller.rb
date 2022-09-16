@@ -21,7 +21,7 @@ class RecipeFoodsController < ApplicationController
     @recipe = Recipe.find(params[:recipe_id])
   end
 
-  # Edit recipe food according to it it 
+  # Edit recipe food according to it it
   # /1/edit
   def edit
     @recipe = Recipe.find(params[:id])
@@ -58,6 +58,7 @@ class RecipeFoodsController < ApplicationController
   end
 
   private
+
   # Only allow a list of trusted parameters through.
   def recipe_food_params
     params.require(:recipe_food).permit(:food_id, :quantity)
