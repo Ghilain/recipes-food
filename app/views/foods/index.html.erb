@@ -17,8 +17,8 @@
             <td><%= food.price %></td>
             <td>
                 <% if can? :destroy, food %>
-                    <div class="delete_food_action">
-                        <%= button_to "DELETE", { action: :destroy, id: food.id }, method: :delete, class:"btn btn-danger" %>
+                    <div class="">
+                        <%= button_to "Remove", { action: :destroy, id: food.id }, method: :delete, class:"btn btn-danger" %>
                     </div>
                 <% end %>
             </td>
