@@ -1,4 +1,4 @@
-require 'rails_helper' # rubocop:todo Layout/EndOfLine
+require 'rails_helper'
 
 RSpec.describe Food, type: :model do
   subject { Food.new(name: 'Chicken', measurement_unit: 'kg', price: 2, quantity: 3) }

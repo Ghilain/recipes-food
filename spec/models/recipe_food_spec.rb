@@ -1,4 +1,4 @@
-require 'rails_helper' # rubocop:todo Layout/EndOfLine
+require 'rails_helper'
 
 RSpec.describe RecipeFood, type: :model do
   recipe = Recipe.create(name: 'Chicken Salad', preparation_time: '2 hours', cooking_time: '1 hour',
