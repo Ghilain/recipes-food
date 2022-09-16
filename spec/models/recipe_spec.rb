@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Recipe, type: :model do
-  user = User.create(name: 'Dudu')
+  user = User.create(name: 'ghila')
   subject do
     Recipe.new(user_id: user.id, name: 'Chicken Salad', preparation_time: '2 hours', cooking_time: '1 hour',
                description: 'Chicken Salad description')

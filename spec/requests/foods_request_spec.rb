@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'RecipeFoods', type: :request do
   before :each do
-    @user = User.create(name: 'Dudu', email: 'dudu@test.com', password: '123456789')
+    @user = User.create(name: 'ghila', email: 'ghila@test.com', password: '123456789')
     @food = @user.foods.create(name: 'Chicken', measurement_unit: 'kg', price: 2, quantity: 3)
     post user_session_path, params: { user: { email: @user.email, password: @user.password } }
   end

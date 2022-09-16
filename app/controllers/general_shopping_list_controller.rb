@@ -5,6 +5,7 @@ class GeneralShoppingListController < ApplicationController
       recipe.recipe_foods.map(&:food)
     end
     recipes_foods = all_foods.flatten
+    # making general shopping list
     @food_items_to_buy = user_foods.select { |food| food unless recipes_foods.include?(food) }
     @total_foods = @food_items_to_buy.count
     @total_price = @food_items_to_buy.map(&:price).sum

@@ -7,9 +7,9 @@ class FoodsController < ApplicationController
 
   def create
     @food = current_user.foods.new(food_params)
-
+    # condition to check if food created
     if @food.save
-      redirect_to foods_path, notice: 'New food created successfully.'
+      redirect_to foods_path, notice: 'Food created successfully.'
     else
       render :new, status: :unprocessable_entity
     end

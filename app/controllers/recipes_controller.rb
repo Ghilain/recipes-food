@@ -16,7 +16,7 @@ class RecipesController < ApplicationController
     @recipe = @user.recipes.new(recipe_params)
 
     if @recipe.save
-      redirect_to recipes_path, notice: 'New recipe created successfully.'
+      redirect_to recipes_path, notice: 'Recipe created successfully.'
     else
       render :new, status: :unprocessable_entity
     end
@@ -27,7 +27,7 @@ class RecipesController < ApplicationController
     @recipe.destroy
 
     respond_to do |format|
-      format.html { redirect_to recipes_url, notice: 'Recipe was successfully destroyed.' }
+      format.html { redirect_to recipes_url, notice: 'Recipe destroyed successfully.' }
       format.json { head :no_content }
     end
   end
